@@ -1,0 +1,16 @@
+System.Net.Http is required by Monek.Pos.Bridge.dll for .NET Framework 4.0. 
+
+- It can be referenced through NuGet or manually included from the "Required" folder.
+- System.Net.Http has it's own dependencies which are all in the "Optional" folder.
+
+
+Or, it can be utilised directly from a suitable default installation in the GAC.
+
+Testing has shown that these dependency libraries are not strictly required as .NET will be a little bit clever and pull in the suitable library references from other installed .NET 4.x flavours.
+
+Specifically, on any modern Windows version System.Net.Http is installed in the GAC (Global Assembly Cache) along with .NET Framework 4.8 and this can be consumed by the Bridge library.
+
+See:
+https://learn.microsoft.com/en-us/dotnet/framework/install/on-windows-10
+https://learn.microsoft.com/en-us/dotnet/framework/install/on-windows-11
+https://learn.microsoft.com/en-us/dotnet/framework/install/on-server-2022
